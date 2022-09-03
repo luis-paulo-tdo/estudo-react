@@ -5,6 +5,14 @@ const Events = () => {
         console.log(event);
     };
 
+    const renderSomething = (x) => {
+        if (x) {
+            return <h2>Valor Verdadeiro</h2>
+        }  else {
+            return <h2>Valor Falso</h2>
+        }
+    };
+
     return (
         <div>
             <div>
@@ -18,6 +26,8 @@ const Events = () => {
                     }
                 }}>Clique Aqui #3</button>
             </div>
+            {renderSomething(true)}
+            {renderSomething(false)}
         </div>
     )
 };
