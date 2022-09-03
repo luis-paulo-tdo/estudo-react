@@ -1,5 +1,7 @@
 // Arquivos de estilo
 
+import MyComponent from "./MyComponent";
+
 const FirstComponent = () => {
 
     // Esta função exibe o primeiro componente criado para o projeto
@@ -11,6 +13,7 @@ const FirstComponent = () => {
 
             <h2>Meu Primeiro Componente</h2>
             <p className="texto">Meu texto</p>
+            <MyComponent/>
         </div>
     )
 }
