@@ -1,6 +1,7 @@
 import './App.css';
 
 import Universe from './assets/01.jpg';
+import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <img src={Universe} alt="Universo #2" width="50%" />
       </div>
       <ManageData/>
+      <ListRender/>
     </div>
   );
 }
