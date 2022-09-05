@@ -1,11 +1,17 @@
 import './App.css';
+import { useState } from 'react';
 
 import Universe from './assets/01.jpg';
 import ConditionalRender from './components/ConditionalRender';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
+import ShowUserName from './components/ShowUserName';
 
 function App() {
+
+  const name = "Joaquim";
+  const [userName] = useState('Maria');
+
   return (
     <div className="App">
       <h1>Aplicação #3 - Fundamentos Avançados</h1>
@@ -21,6 +27,7 @@ function App() {
       <ManageData/>
       <ListRender/>
       <ConditionalRender/>
+      <ShowUserName name={userName} />
     </div>
   );
 }
