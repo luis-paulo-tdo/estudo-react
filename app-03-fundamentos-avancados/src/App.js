@@ -1,6 +1,7 @@
 import './App.css';
 
 import Universe from './assets/01.jpg';
+import ConditionalRender from './components/ConditionalRender';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 
@@ -19,6 +20,7 @@ function App() {
       </div>
       <ManageData/>
       <ListRender/>
+      <ConditionalRender/>
     </div>
   );
 }
