@@ -8,3 +8,19 @@ body {
 h1 {
   color: red;
 }
+
+.red-title {
+  color: red;
+  border: 1px solid red;
+  padding: 5px;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.title {
+  color: black;
+  border: 1px solid black;
+  padding: 5px;
+  width: 30%;
+  margin: 0 auto;
+}

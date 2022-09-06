@@ -6,6 +6,7 @@ function App() {
 
   const numberIndex = 9;
   const [name] = useState('Matheus');
+  const [redTitle] = useState(false);
 
   return (
     <div className="App">
@@ -25,6 +26,9 @@ function App() {
       <p style={numberIndex < 10 ? ({color: 'purple'}) : ({color: 'gray'})}>CSS Dinâmico #1</p>
       <p style={numberIndex >= 10 ? ({color: 'purple'}) : ({color: 'gray'})}>CSS Dinâmico #2</p>
       <p style={name === 'Matheus' ? ({color: 'green'}) : null}>CSS Dinâmico #3</p>
+
+      {/* Classes Dinâmicas */}
+      <p className={ redTitle ? 'red-title' : 'title' }>Texto estilizado com classe dinâmica</p>
     </div>
   );
 }
