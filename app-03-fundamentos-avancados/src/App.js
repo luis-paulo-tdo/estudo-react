@@ -12,6 +12,7 @@ import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
 import Message from './components/Message';
 import ChangeMessageState from './components/ChangeMessageState';
+import UserDetails from './components/UserDetails';
 
 function App() {
 
@@ -19,6 +20,13 @@ function App() {
     { id: 1, brand: 'Ferrari', color: 'Amarela', newCar: true, km: 0 },
     { id: 2, brand: 'Kia', color: 'Branca', newCar: false, km: 1000 },
     { id: 3, brand: 'Renault', color: 'Azul', newCar: false, km: 23400 }
+  ];
+
+  const users = [
+    { id: 1, name: 'Luis', age: 32, job: 'Dev Sr.' },
+    { id: 2, name: 'Paulo', age: 24, job: 'Dev Pl.' },
+    { id: 3, name: 'Torres', age: 17, job: 'Dev Jr.' },
+    { id: 4, name: 'Oliveira', age: 15, job: 'Stag'}
   ];
 
   const [userName] = useState('Maria');
@@ -81,6 +89,11 @@ function App() {
       {/* State Lift */}
       <Message message={message} />
       <ChangeMessageState handleMessage={handleMessage} />
+
+      {/* Tarefa #4 */}
+      {users.map(user => (
+        <UserDetails key={user.id} user={user} />
+      ))}
     </div>
   );
 }
