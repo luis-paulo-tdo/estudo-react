@@ -1,6 +1,8 @@
 import './App.css';
 import { useState } from 'react';
+
 import MyComponent from './components/MyComponent';
+import Title from './components/Title';
 
 function App() {
 
@@ -29,6 +31,9 @@ function App() {
 
       {/* Classes Dinâmicas */}
       <p className={ redTitle ? 'red-title' : 'title' }>Texto estilizado com classe dinâmica</p>
+
+      {/* CSS Modules */}
+      <Title />
     </div>
   );
 }
