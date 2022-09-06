@@ -7,12 +7,11 @@ import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
+import Fragment from './components/Fragment';
 
 function App() {
 
-  const name = "Joaquim";
   const [userName] = useState('Maria');
-
   const cars = [
     { id: 1, brand: 'Ferrari', color: 'Amarela', newCar: true, km: 0 },
     { id: 2, brand: 'Kia', color: 'Branca', newCar: false, km: 1000 },
@@ -49,6 +48,9 @@ function App() {
       {cars.map(car => (
         <CarDetails key={car.id} brand={car.brand} km={car.km} color={car.color} newCar={car.newCar}/>
       ))}
+
+      {/* Fragments */}
+      <Fragment propFragment="Terceiro Título" />
     </div>
   );
 }
