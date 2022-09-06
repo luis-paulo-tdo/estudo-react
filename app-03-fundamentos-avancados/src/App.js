@@ -54,8 +54,12 @@ function App() {
       <Fragment propFragment="Terceiro Título" />
 
       {/* Children */}
-      <Container>
+      <Container myValue="Testing #1">
         <p>Este é o conteúdo</p>
+      </Container>
+
+      <Container myValue="Testing #2">
+        <h5>Este é o conteúdo</h5>
       </Container>
     </div>
   );
