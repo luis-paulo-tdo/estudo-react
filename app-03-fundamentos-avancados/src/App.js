@@ -10,15 +10,23 @@ import CarDetails from './components/CarDetails';
 import Fragment from './components/Fragment';
 import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
+import Message from './components/Message';
+import ChangeMessageState from './components/ChangeMessageState';
 
 function App() {
 
-  const [userName] = useState('Maria');
   const cars = [
     { id: 1, brand: 'Ferrari', color: 'Amarela', newCar: true, km: 0 },
     { id: 2, brand: 'Kia', color: 'Branca', newCar: false, km: 1000 },
     { id: 3, brand: 'Renault', color: 'Azul', newCar: false, km: 23400 }
   ];
+
+  const [userName] = useState('Maria');
+  const [message, setMessage] = useState("");
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  }
 
   function showMessage() {
     console.log('Evento do componente pai');
@@ -69,6 +77,10 @@ function App() {
 
       {/* Executar Função */}
       <ExecuteFunction myFunction={showMessage} />
+
+      {/* State Lift */}
+      <Message message={message} />
+      <ChangeMessageState handleMessage={handleMessage} />
     </div>
   );
 }
