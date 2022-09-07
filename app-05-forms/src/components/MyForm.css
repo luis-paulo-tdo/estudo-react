@@ -9,6 +9,7 @@ input, textarea, select {
     margin-top: 10px;
 }
 
-div {
+.form-component {
+    display: block;
     margin-bottom: 1em;
 }
