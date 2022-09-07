@@ -1,0 +1,22 @@
+.table_line p {
+    display: inline-block;
+    width: 19%;
+    text-align: left;
+    margin-left: 1%;
+}
+
+.red_label {
+    color: red;
+}
+
+.green_label {
+    color: green;
+}
+
+.blue_label {
+    color: blue;
+}
+
+.gray_label {
+    color: gray;
+}
