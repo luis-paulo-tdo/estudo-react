@@ -7,7 +7,8 @@ const MyForm = ({ user }) => {
     // 6 - Controlled Inputs
     const [name, setName] = useState(user ? user.name : '');
     const [email, setEmail] = useState(user ? user.email : '');
-    const [bio, setBio] = useState('');
+    const [bio, setBio] = useState(user ? user.bio : '');
+    const [role, setRole] = useState(user ? user.role : '');
 
     const handleName = (e) => {
         setName(e.target.value);
@@ -19,12 +20,14 @@ const MyForm = ({ user }) => {
         console.log('Usuário: ', name);
         console.log('E-mail: ', email);
         console.log('Bio: ', bio);
+        console.log('Role: ', role);
         console.log('-');
 
         // 7 - Limpar formulário
         setName('');
         setEmail('');
         setBio('');
+        setRole('');
     };
 
     return (
@@ -47,7 +50,19 @@ const MyForm = ({ user }) => {
                 {/* 8 - Textarea */}
                 <label className="form-component">
                     <span>Biografia</span>
-                    <textarea name="bio" placeholder='Descrição do usuário' rows="5" onChange={(e) => setBio(e.target.value)} value={bio}></textarea>
+                    <textarea name="bio" placeholder='Descrição do usuário' rows="5" onChange={(e) => setBio(e.target.value)} value={bio}>
+                        {bio}
+                    </textarea>
+                </label>
+
+                {/* 9 - Select */}
+                <label>
+                    <span>Função no Sistema</span>
+                    <select name="role" value={role} onChange={ (e) => setRole(e.target.value) }>
+                        <option value="user">Usuário</option>
+                        <option value="editor">Editor</option>
+                        <option value="admin">Administrador</option>
+                    </select>
                 </label>
 
                 <input type="submit" value="Enviar" />
