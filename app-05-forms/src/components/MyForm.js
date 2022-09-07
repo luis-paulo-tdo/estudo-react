@@ -11,14 +11,19 @@ const MyForm = () => {
         setName(e.target.value);
     };
 
-    console.log('Usuário: ', name);
-    console.log('E-mail: ', email);
-    console.log('-');
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('Enviando o Formulário');
+        console.log('Usuário: ', name);
+        console.log('E-mail: ', email);
+        console.log('-');
+    };
 
     return (
         <div>
             {/* 1 - Criação de Formulário */}
-            <form>
+            {/* 5 - Envio de form */}
+            <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Nome:</label>
                     <input type="text" name="name" placeholder="Digite o seu nome" onChange={handleName} />
@@ -27,6 +32,7 @@ const MyForm = () => {
                 {/* 2 - Label envolvendo o input */}
                 <label>
                     <span>E-mail</span>
+                    {/* 4 - Simplificando manipulação de state */}
                     <input type="email" name="email" placeholder="Digite o seu e-mail" onChange={(e) => setEmail(e.target.value)} />
                 </label>
 
